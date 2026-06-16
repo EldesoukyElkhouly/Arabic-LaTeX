@@ -1,0 +1,222 @@
+%------------------------------
+% This File is Prepared by : ALhanouf ALjowair
+% Computer Science Department
+%23-9-2009 , Wednesday 
+%------------------------------
+\documentclass{report}
+%---------------------------------%
+%% 1. Import the advancedcoverpage package
+\usepackage[layout=classic]{advancedcoverpage}
+%% 2. Import nomencl package
+\usepackage{nomencl}
+\renewcommand{\nomname}{List of Abbreviations}
+\makenomenclature
+%% 3. Import arabtex package for arabic language
+\usepackage{arabtex}
+\usepackage{utf8}
+\setcode{utf8}
+%% 4. Import hyperref package for inserting hyper link
+\usepackage{hyperref}
+%% 5. Import graphics package for inserting  pictures
+\usepackage{graphicx}
+%% 6. Import listings package for inserting  Codes 
+\usepackage{listings}
+%% 7. Import mycounter package for define a counter in Enumerating
+\newcounter{mycounter}
+%% 8. Import subfig package for inserting  sub-figures
+\usepackage{subfig}
+%% 9. Import geometry package for setting the margins of pages
+\usepackage{geometry}
+\geometry{a4paper,tmargin=2.5cm,bmargin=2.5cm,lmargin=3cm,rmargin=2cm}
+%% 10. Import fancyhdr package for running chapter/section name in header or footer
+\usepackage{fancyhdr}
+
+%---------------------------------%
+%% 2. Declarations of your title page
+\header{XYZ-12345\\Course Name}
+\title{here is the title of the report}
+\subtitle{Subtitle}
+\subsubtitle{Subsubtitle}
+\presentedto{Presented to \\DR. Jon  }
+\author{By \\the writer of the report }
+\organization{\textsc{The University of X}\\The Faculty of Y\\Department of Z}
+\date{May 10, 2009}
+\location{Riyadh}
+\footer{\copyright 2009 All rights reserved}
+%---------------------------------%
+\begin{document}
+%setting the header and footer of the page
+\pagestyle{fancyplain}
+\lhead{\fancyplain{}{\leftmark}}
+\rhead{\thepage}
+\chead{}
+\cfoot{}
+%-----------------------%
+% Generate the cover page
+\maketitle
+%-----------------------%
+% Generate the Abstract page
+\chapter*{Abstract}
+% setting the page numbering to roman
+\pagenumbering{roman}
+% Add Abstract to table of content
+\addcontentsline{toc}{chapter}{Abstract}
+here is the abstarct
+%-----------------------%
+% Generate the Acknowledgements page
+\chapter*{Acknowledgements}
+% Add Acknowledgements to table of content
+\addcontentsline{toc}{chapter}{ Acknowledgements }
+it is acknowledgments
+%-----------------------%
+% Print the nomenclature page
+\printnomenclature[1 cm]
+\nomenclature{AI}{: Artificial Intelligence}
+\nomenclature{API}{: Application Program Interface}
+%\nomenclature{SE}{: Software Engineer}
+%-----------------------%
+\tableofcontents 
+\listoffigures
+\listoftables
+%-----------------------%
+% Generate the Introduction Page
+\chapter{Introduction}
+% setting the page numbering to roman
+\pagenumbering{arabic}
+% Moving to New page
+\newpage
+% Generate section inside a chapter
+This is the first Chapter
+\section{General View}
+here you write the first Section of your Introduction \RL{(المقدمة)} .
+\\
+%---------------------------
+\\
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+\\
+This is the Exmaple how to write an Arabic Paragraph .
+\begin{RLtext}
+هنا تكتب المقدمة للتقرير 
+\end{RLtext}
+%---------------------------
+\\
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+\\
+This is the Example how to Insert Hyper Link
+Here's a link to \href{http://www.google.com/}{\RL{محرك بحث قوقل}}.
+\\
+%---------------------------
+% Create a table with 3 rows and 3 columns
+\\
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+\\
+This is the Example how to Creat a Table in Latex
+\begin{table}[h]
+\centering
+\begin{tabular}{r l c }
+\hline 1st rwo - 1s col & \RL{الصف الأول - العمود الثاني}& 1st row - 3rd col \\
+\hline 2nd rwo - 1s col & \RL{الصف الثاني - العمود الثاني} & 2nd row - 3rd col \\ 
+\hline 3rd rwo - 1s col & \RL { الصف الثالث العمود الثاني} & 3rd row - 3rd col\\ \hline
+\end{tabular}
+\caption{Nonlinear Model Results} % title of Table
+\label{table:t1}
+\end{table}
+
+%---------------------------
+% Generate the state of Art Page
+\chapter{state of Art}
+\newpage
+This is the Example how to refer to a certain table in the report
+hello , refering to Table~\ref{table:t1}\\\\
+I have used many references in preparing my report , for more details , you can see these \cite{Key1,Key2} \\\\
+%----------------------------
+\\
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+\\
+%Setting the code appearance
+This is Example how to insert Program Code in the Report
+\lstset{language=Java , numbers=left , caption=The Program from a file ,captionpos=b, frame=single}
+\renewcommand\lstlistingname{Program}%      default is Listing
+% Inserting Code from a file
+\lstinputlisting{program.java}
+
+\lstset{language=Java , numbers=left , caption=The Program Written in Latex  ,captionpos=b, frame=single}
+\begin{lstlisting}
+/* this is a simple Java program */
+class Example {
+    // your program begins with a call to main()
+    public static void main(String args[]){
+      System.out.println("this is a simple Java program");
+    }
+}
+\end{lstlisting}
+%---------------------------
+
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+
+This is Example how to insert a figure in the report
+% Inserting a Figures 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1 ]{google.png}
+\caption{google}
+\label{labelname}
+\end{figure}
+%---------------------------
+
+\newpage
+
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+
+This is the example how to insert Enumerating (Arabic Numbers )
+% Inserting Enumerate(Numbering)
+\begin{enumerate}
+\item hello
+\item welcome
+\end{enumerate} 
+%---------------------------
+
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+This is the example how to insert Enumerating (Roman )
+% Inserting Enumerating 
+\begin{list}{Topic \Roman{mycounter}:~}{\usecounter{mycounter}}
+\item Item one
+\item Item two
+\item Item three
+\end{list}
+%---------------------------
+
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+
+This is example how to insert Sub-figures in the report
+%Inserting Sub-Float (Sub-Figures)
+\begin{figure}
+  \centering
+  \subfloat[google]{\label{fig:google}\includegraphics[scale=0.5 ]{google.png}}                
+  ~~~~
+  \subfloat[yahoo]{\label{fig:yahoo}\includegraphics[scale=0.5 ]{y.png}}
+  \caption{search engines}
+  \label{fig:SE}
+\end{figure}
+%---------------------------
+% Generat the Appendix Page .
+\appendix
+\chapter{Coding}
+this is the first appendix
+\chapter{Manual Reference}
+this is the second appendix
+%---------------------------
+% Rename the Bibliography Page to "Refernces" 
+\renewcommand\bibname{Refrences}
+% Generate the Bibliography Page
+\begin{thebibliography}{}
+% Add the Bibliography Page to table of content
+\addcontentsline{toc}{chapter}{Refrences} 
+\bibitem{Key1}Ian Sommerville, ”Software Engineering,” 7th ed,Boston San Francisco, 2004.
+\bibitem{Key2}Scientific Paper Located on the Internet at \href{www.namahn.com/resources/documents/note-eyetracking.pdf}{www.namahn.com/resources/documents/note-eyetracking.pdf}. Last visited: 15 September, 2009.
+\end{thebibliography}
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%
