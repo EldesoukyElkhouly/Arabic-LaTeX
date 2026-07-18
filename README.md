@@ -9,4 +9,4 @@
 ## [ تجميعة قديمة من كتب او مقالات عربية لشرح التك واللاتك.](https://github.com/EldesoukyElkhouly/Arabic-LaTeX/tree/main/%D8%AA%D8%AC%D9%85%D9%8A%D8%B9%D8%A7%D8%AA%20%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA%20%D9%85%D9%86%20%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D9%86%D8%AA)
 
 
-## [ شروحات جديدة ](https://github.com/EldesoukyElkhouly/Arabic-LaTeX/tree/main/)
+## [ شروحات جديدة ](https://github.com/EldesoukyElkhouly/Arabic-LaTeX/tree/main/%D8%B4%D8%B1%D9%88%D8%AD%D8%A7%D8%AA%D9%8A%20%D8%B9%D9%86%20%D9%84%D8%A7%D8%AA%D9%83)
